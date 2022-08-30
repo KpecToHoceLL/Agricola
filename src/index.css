@@ -1,5 +1,66 @@
-#fieldTable {
-    width: 600px;
-    height: 428px;
-    font-style: italic;
+#fieldTableBG {
+    position: static;
+    width: 845px;
+    height: 462px;
+    background-repeat: round;
+    background-image: url(../public/img/playerField.jpg);
+    z-index: 1;
+    right: 0;
+
 }
+
+#actionTable1 {
+    position: fixed;
+    width: 618px;
+    height: 918px;
+    background-repeat: round;
+    background-image: url(../public/img/actionField1.jpg);
+    left: 0;
+    top: 0;
+
+}
+
+#fieldTable {
+    width: 810px;
+    height: 480px;
+    position: absolute;
+    top: -5px;
+    left: 35px;
+    border-collapse: separate;
+    border-spacing: 30px 25px;
+}
+
+.fieldCell {
+    width: 115px;
+    height: 115px;
+
+}
+
+.hidden { display: none; }
+
+#menuBlock {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 10%;
+}
+
+#menu {
+    position: fixed;
+    right: 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+#materialsTable {
+    z-index: 9999;
+    position: fixed;
+    left: 30%;
+    top: 0;
+
+}
+
+

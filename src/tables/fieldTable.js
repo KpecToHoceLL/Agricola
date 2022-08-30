@@ -2,15 +2,13 @@ import React from "react";
 
 export function FieldTable(props) {
     return(
-        <div id='fieldTable'>
-        <table>
+        <table id='fieldTable'>
             <tbody>
             <TrElemField playerField={props.playerField} trNumber={0} handleSetPlayerField={props.handleSetPlayerField} target={props.target}/>
             <TrElemField playerField={props.playerField} trNumber={1} handleSetPlayerField={props.handleSetPlayerField} target={props.target}/>
             <TrElemField playerField={props.playerField} trNumber={2} handleSetPlayerField={props.handleSetPlayerField} target={props.target}/>
             </tbody>
         </table>
-        </div>
     )
 }
 
@@ -26,7 +24,7 @@ export function TrElemField(props) {
 
 export function TdElem(props) {
     return (
-        <td onClick={() => props.handleSetPlayerField(props.target, props.trNumber, props.tdNumber)}>
+        <td  onClick={() => props.handleSetPlayerField(props.target, props.trNumber, props.tdNumber)}>
             {props.playerField[props.trNumber][props.tdNumber]}
         </td>    )
 }
