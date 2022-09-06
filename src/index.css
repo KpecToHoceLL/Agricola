@@ -9,15 +9,74 @@
 
 }
 
-#actionTable1 {
+#actionFieldBG{
+
+}
+
+#actionField {
+    display: grid;
     position: fixed;
     width: 618px;
     height: 918px;
     background-repeat: round;
     background-image: url(../public/img/actionField1.jpg);
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 10px;
+    align-content: space-evenly;
+    grid-template-areas:
+    "actionCard1 actionCard2 clearBlock "
+    "actionCard3 actionCard4 clearBlock "
+    "actionCard5 actionCard6 clearBlock ";
+}
 
+.clearBlock {
+    display: grid;
+    grid-area: clearBlock;
+    width: 180px;
+    grid-row-gap: 30px;
+}
+
+.item0 {
+    width: 180px;
+    height: 130px;
+
+}
+
+.item1 {
+    grid-area: actionCard1;
+    width: 180px;
+    height: 270px;
+}
+
+.item2 {
+    grid-area: actionCard2;
+    width: 180px;
+    height: 270px;
+}
+
+.item3 {
+    grid-area: actionCard3;
+    width: 180px;
+    height: 270px;
+}
+
+.item4 {
+    grid-area: actionCard4;
+    width: 180px;
+    height: 270px;
+}
+
+.item5 {
+    grid-area: actionCard5;
+    width: 180px;
+    height: 270px;
+}
+
+.item6 {
+    grid-area: actionCard6;
+    width: 180px;
+    height: 270px;
+    position: relative;
 }
 
 #fieldTable {
@@ -55,12 +114,11 @@
     height: 30px;
 }
 
-#materialsTable {
+.materialsTable {
     z-index: 9999;
     position: fixed;
     left: 30%;
     top: 0;
-
+    grid-template-columns: repeat(7, 100px);
 }
-
 

@@ -1,44 +1,38 @@
-import React from "react";
-import {GardenEmpty} from "./actions";
+import React, {useState} from "react";
+import {GardenEmpty, RoomWooden} from "./actions";
 
 export function ActionsTable1(props) {
     return(
-        <div id='actionTable1'>
-        <table>
-        <tbody>
-        <TrElemActionField/>
-        <TrElemActionField/>
-        <TrElemActionField/>
-        </tbody>
-        </table>
-            <ul id='rightLineActions'>
-                <LiElemActionsField/>
-                <LiElemActionsField action={() => props.handleSetPlayerMaterials(1, 'food')}/>
-                <LiElemActionsField action={() => props.handleSetPlayerMaterials(1, 'millet')}/>
-                <LiElemActionsField actions={() => props.setActionChangeCell(GardenEmpty)}/>
-                <LiElemActionsField/>
-                <LiElemActionsField action={() => props.handleSetPlayerMaterials(1, 'food')}/>
-            </ul>
-        </div>
+            <div  id='actionField'>
+            <ActionButton item='1'>111</ActionButton>
+            <ActionButton item='2'>111</ActionButton>
+            <ActionButton item='3'>111</ActionButton>
+            <ActionButton item='4'>111</ActionButton>
+            <ActionButton item='5'>111</ActionButton>
+            <ActionButton item='6'>111</ActionButton>
+                <div class='clearBlock'>
+                    <ActionButtonClear  onClick={() => props.setActionChangeCell(RoomWooden)}/>
+                    <ActionButtonClear onclick={() => props.handleSetPlayerMaterials(1, 'food')}/>
+                    <ActionButtonClear onclick={() => props.handleSetPlayerMaterials(1, 'millet')}/>
+                    <ActionButtonClear onClick={() => props.setActionChangeCell(GardenEmpty)}/>
+                    <ActionButtonClear/>
+                    <ActionButtonClear/>
+                </div>
+            </div>
     )
 
 }
 
-export function TrElemActionField(props) {
-    const values = props.number
-    return (<tr>
-        <TdElemActionField/>
-    </tr>)
-}
-
-
-export function TdElemActionField(props) {
-    return <td>
-    </td>
-}
-
-export function LiElemActionsField(props) {
+export function ActionButton(props) {
     return (
-        <li class='liElemActionsField' onclick={props.action}></li>
+        <img class={'item' + props.item} src='./img/actions/4players/1.png'></img>
+    )
+}
+
+
+export function ActionButtonClear(props) {
+    const [isBorder, setIsBorder] = useState(false)
+    return (
+        <div style={{ border: + isBorder ? '5px solid' : 'none' }} onMouseOver={() => setIsBorder(true)} onMouseOut={() => setIsBorder(false)} class='item0' onClick={() => props.action}></div>
     )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 export function MaterialsTable(props) {
-    return <table id='materialsTable'>
+    return <table class='materialsTable'>
         <tr>
             <td class="materialsValue"><img class='icon' src='./img/icons/foodIcon.png'></img>{props.playerMaterials.food}</td>
             <td class="materialsValue"><img class='icon' src='./img/icons/woodIcon.png'></img>:{props.playerMaterials.wood}</td>

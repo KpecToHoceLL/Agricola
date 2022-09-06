@@ -28,7 +28,7 @@ function App() {
     }
     const [playerMaterials, setPlayerMaterials] = useState(defaultPlayer.materials);
     const [playerField, setPlayerField] = useState(defaultPlayer.field);
-    const [fieldIsHidden, setFieldMenuIsHidden] = useState(false);
+    const [fieldIsHidden, setFieldMenuIsHidden] = useState(true);
     const handleSetPlayerField = (value, i, j) => {
         setPlayerField(playerField => {
             const newPlayerField = { ...playerField }
@@ -53,10 +53,9 @@ function App() {
     return (
       <div id="App">
          <GameMenu fieldIsHidden={fieldIsHidden} actionChangeCell={actionChangeCell} playerField={playerField} handleSetPlayerField={handleSetPlayerField} setFieldMenuIsHidden={setFieldMenuIsHidden}/>
-        <MaterialsTable playerMaterials={playerMaterials}/>
-          <PlowAction setActionChangeCell={setActionChangeCell}/>
-          <GetSheepAction sheepIncrement={handleSetPlayerMaterials}/>
-    <ActionsTable1 handleSetPlayerField={handleSetPlayerField} handleSetPlayerMaterials={handleSetPlayerMaterials}/>
+          <MaterialsTable playerMaterials={playerMaterials}/>
+
+    <ActionsTable1 setActionChangeCell={setActionChangeCell} handleSetPlayerField={handleSetPlayerField} handleSetPlayerMaterials={handleSetPlayerMaterials}/>
 
         </div>
   )

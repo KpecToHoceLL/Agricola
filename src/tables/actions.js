@@ -3,6 +3,7 @@ import React from "react";
 export const Empty = <div className="fieldCell"></div>;
 export const GardenEmpty = <img className="fieldCell" src='./img/Plowed.jpg'></img>;
 export const GardenMill3 = <img className="fieldCell" src='./img/Plowed.jpg'></img>;
+export const RoomWooden = <img className="fieldCell" src='./img/RoomWood.png'></img>;
 
 export function GetSheepAction(props) {
     return (
