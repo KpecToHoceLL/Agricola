@@ -4,12 +4,8 @@ export const Empty = <div className="fieldCell"></div>;
 export const GardenEmpty = <img className="fieldCell" src='./img/Plowed.jpg'></img>;
 export const GardenMill3 = <img className="fieldCell" src='./img/Plowed.jpg'></img>;
 export const RoomWooden = <img className="fieldCell" src='./img/RoomWood.png'></img>;
+export const RoomClay = <img className="fieldCell" src='./img/RoomClay.png'></img>;
 
-export function GetSheepAction(props) {
-    return (
-        <div onClick={() => props.sheepIncrement(1, 'sheep')}>GetSheep</div>
-    )
-}
 
 export function PlowAction(props) {
     return (

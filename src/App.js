@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState } from "react";
 import {FieldTable} from './tables/fieldTable.js';
-import {ActionsTable1} from './tables/actionsTable.js';
+import {ActionsTable1, ActionsTable2} from './tables/actionsTable.js';
 import {MaterialsTable} from './tables/materialsTable.js';
-import {Empty, GardenEmpty, GetSheepAction, PlowAction} from "./tables/actions.js";
+import {Empty, GardenEmpty, RoomClay, GetSheepAction, PlowAction, RoomWooden} from "./tables/actions.js";
 import {GameMenu} from './tables/menu.js';
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
 
     const defaultPlayer = {
         field: [[Empty,Empty,Empty,Empty,Empty],
-            [Empty,Empty,Empty,Empty,Empty],
-            [Empty,Empty,Empty,Empty,Empty]],
+            [RoomWooden,Empty,Empty,Empty,Empty],
+            [RoomWooden,Empty,Empty,Empty,Empty]],
         materials: {
             food: 0,
             wood: 0,
@@ -49,13 +49,22 @@ function App() {
         })
 
     }
+    function HouseUpgrade() {
+        for (let i=0; i<3; i+1) {
+            for (let j=0; j<5; j+1) {
+                if (playerField[i][j] === RoomWooden) {
+                    handleSetPlayerField(RoomClay,i,j)
+                }
+            }
+        }
+    }
     const [actionChangeCell, setActionChangeCell] = useState(null);
     return (
       <div id="App">
          <GameMenu fieldIsHidden={fieldIsHidden} actionChangeCell={actionChangeCell} playerField={playerField} handleSetPlayerField={handleSetPlayerField} setFieldMenuIsHidden={setFieldMenuIsHidden}/>
           <MaterialsTable playerMaterials={playerMaterials}/>
-
-    <ActionsTable1 setActionChangeCell={setActionChangeCell} handleSetPlayerField={handleSetPlayerField} handleSetPlayerMaterials={handleSetPlayerMaterials}/>
+          <ActionsTable1 setActionChangeCell={setActionChangeCell} handleSetPlayerField={handleSetPlayerField} handleSetPlayerMaterials={handleSetPlayerMaterials}/>
+    <ActionsTable2 HouseUpgrade={HouseUpgrade} setActionChangeCell={setActionChangeCell} handleSetPlayerField={handleSetPlayerField} handleSetPlayerMaterials={handleSetPlayerMaterials}/>
 
         </div>
   )

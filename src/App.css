@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+/*
+
+#App {
+    display: grid;
+    grid-template-areas:
+    "actionFieldBG1 actionFieldBG2"
+;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#fieldTableBG {
+    position: static;
+    width: 845px;
+    height: 462px;
+    background-repeat: round;
+    background-image: url(../public/img/playerField.jpg);
+    z-index: 1;
+    right: 0;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#fieldTable {
+    width: 810px;
+    height: 480px;
+    position: absolute;
+    top: -5px;
+    left: 35px;
+    border-collapse: separate;
+    border-spacing: 30px 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fieldCell {
+    width: 115px;
+    height: 115px;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+#actionFieldBG {
+    position: fixed;
+    grid-area: actionFieldBG1;
+    width: 618px;
+    height: 918px;
+    background-repeat: round;
+    background-image: url(../public/img/actionField1.jpg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#actionFieldBG2 {
+    position: fixed;
+    grid-area: actionFieldBG2;
+    width: 618px;
+    height: 918px;
+    background-repeat: round;
+    background-image: url(../public/img/actionField2.jpg);
 }
+
+#actionField {
+    left: 30px;
+    width: 590px;
+    height: 918px;
+    display: grid;
+    position: fixed;
+    align-content: space-evenly;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    grid-template-areas:
+    "actionCard1 actionCard2 clearBlock "
+    "actionCard3 actionCard4 clearBlock "
+    "actionCard5 actionCard6 clearBlock ";
+}
+
+.clearBlock {
+    display: grid;
+    grid-area: clearBlock;
+    width: 200px;
+    grid-row-gap: 30px;
+}
+
+.item0 {
+    width: auto;
+    height: auto;
+
+}
+
+.item1 {
+    grid-area: actionCard1;
+    width: 170px;
+    height: 270px;
+}
+
+.item2 {
+    grid-area: actionCard2;
+    width: 180px;
+    height: 270px;
+}
+
+.item3 {
+    grid-area: actionCard3;
+    width: 180px;
+    height: 270px;
+}
+
+.item4 {
+    grid-area: actionCard4;
+    width: 180px;
+    height: 270px;
+}
+
+.item5 {
+    grid-area: actionCard5;
+    width: 180px;
+    height: 270px;
+}
+
+.item6 {
+    grid-area: actionCard6;
+    width: 180px;
+    height: 270px;
+    position: relative;
+}
+
+
+.hidden { display: none; }
+
+#menuBlock {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 10%;
+}
+
+#menu {
+    position: fixed;
+    right: 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.materialsTable {
+    z-index: 9999;
+    position: fixed;
+    left: 30%;
+    top: 0;
+}
+
+*/
