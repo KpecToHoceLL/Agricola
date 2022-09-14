@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import {FieldTable} from './tables/fieldTable.js';
 import {ActionsTable1, ActionsTable2} from './tables/actionsTable.js';
 import {MaterialsTable} from './tables/materialsTable.js';
-import {Empty, GardenEmpty, RoomClay, GetSheepAction, PlowAction, RoomWooden} from "./tables/actions.js";
+import {Empty, GardenEmpty, RoomClay, PlowAction, RoomWooden} from "./tables/actions.js";
 import {GameMenu} from './tables/menu.js';
 
 function App() {
